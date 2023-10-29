@@ -1,0 +1,24 @@
+{% extends 'Todo/base.html' %}
+{% block title %} Update {% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" rel="text/css" href="{% static 'Todo/update.css' %}">
+{% endblock %}
+{% block content %}
+<div  id="containpic" style="background: url('{{ task.image.url }}'), lightgray 50% / cover no-repeat;"></div>
+                    <div class="formm">
+                        <p class="head-text">Update Task</p>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.text.label_tag }}
+                            {{ form.text }}
+                            {{ form.description.label_tag }}
+                            {{ form.description }}
+                            {{ form.image.label_tag }}
+                            {{ form.image }}
+                            {{ form.done.label_tag }}
+                            {{ form.done }}
+                            <button type="submit">Update Task</button>
+                        </form>
+                </div>
+{% endblock %}

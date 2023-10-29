@@ -1,0 +1,109 @@
+body{
+    background-color: #5D81AF;
+    padding: 1%;
+}
+.container{
+    position: absolute;
+    width: 1000px;
+    height: 545px;    
+    background-color: #FEA959;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0%;
+    /* background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: 50% auto; */
+    /* background-size: cover; */
+}
+.containpic{
+    height: 100%;
+    width: 50%;
+    background: url('/media/pics/background.png'), lightgray 50% / cover no-repeat;
+    background-position: 50% 80%;
+}
+.main-container{
+    position: relative;
+    z-index: 2;
+    margin: 0px 0px 0px 0px;
+    width: 848px;
+    height: 435px;
+    margin: auto;
+    bottom: 89.1%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+label{
+    margin: 10px 0px 0px 6px;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+}
+#containpic{
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    background: url('/media/pics/loginback.png'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+}
+.formm{
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding:30px 71px 0px 71px;
+    display: flex;
+    flex-direction: column;
+}
+.head-text{
+    color: #111;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: center;
+    margin-bottom: 30px;
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 6px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid #404952;
+    background: #EDEDF1;
+    padding:7px;
+}
+.Done{
+    color: #111;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    margin-left: 3px;
+}
+button{
+    position: relative;
+    top: 7px;
+    left: 81%;
+    width: 62px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #F4F4F4;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #FEA959;
+    border: none;
+}
+a{
+    color: #000;
+}

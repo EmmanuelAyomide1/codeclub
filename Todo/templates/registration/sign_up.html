@@ -1,0 +1,23 @@
+{% extends 'Todo/base.html' %}
+{% block title %} Sign Up {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div  id="containpic"></div>
+                    <div class="formm">
+                        <p class="head-text">Sign Up</p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.username.label_tag}}
+                            {{ form.username}}
+                            {{ form.password1.label_tag}}
+                            {{ form.password1}}
+                            {{ form.password2.label_tag}}
+                            {{ form.password2}}
+                            <!-- <input type="text" name="Username" class="box" placeholder="Username">
+                            <input type="password" name="Password1" class="box" placeholder="Password">
+                            <input type="password" name="Password2" class="box" placeholder="Confirm Password"> -->
+                            <p class="Done">Have an account?<a href="/login">Log in </a></p>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                </div>
+{% endblock %}

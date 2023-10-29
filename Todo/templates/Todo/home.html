@@ -1,0 +1,39 @@
+{% extends 'Todo/base.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" rel="text/css" href="{% static 'Todo/home.css' %}">
+{% endblock %}
+{% block content %}
+<div class="sidemain">
+    <button> <a href="/create/task">&plus;</a> </button>
+</div>
+<div  id="leftmain">
+    <div class="head-text">
+        to_do list
+    </div>
+    <div class="welcome">
+        Hello <span>{{ user.username }}</span>, Welcome back.
+        You have <span>{{ count }}</span> remaining tasks to complete
+        this week.
+    </div>
+</div>
+        <div class="formm">
+            <p class="head-text">recently added</p>
+            <div class="cards">
+{% for task in tasks %}
+<div class="card">
+    <div class="image" style=" background: url('{{task.image.url}}'), lightgray 50% / cover no-repeat;"></div>
+    <p class="text">{{ task.text }}</p>
+    <button><a href="/update/{{task.id }}"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 16" fill="none" class="arrow">
+        <g opacity="0.9">
+          <path d="M4 12H20M20 12L14 18M20 12L14 6" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg></a></button>
+</div>
+{% empty %}
+<p>No Tasks yet</p>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

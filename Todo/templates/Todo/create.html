@@ -1,0 +1,22 @@
+{% extends 'Todo/base.html' %}
+{% block title %} Add task {% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" rel="text/css" href="{% static 'Todo/create.css' %}">
+{% endblock %}
+{% block content %}
+<div id="containpic"></div>
+<div class="formm">
+    <p class="head-text">Create Task</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.text.label_tag }}
+        {{ form.text }}
+        {{ form.description.label_tag }}
+        {{ form.description }}
+        {{ form.image.label_tag }}
+        {{ form.image }}
+        <button type="submit">Add Task</button>
+    </form>
+</div>
+{% endblock %}
