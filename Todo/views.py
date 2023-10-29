@@ -40,7 +40,6 @@ def addTask(request):
            task.author=request.user
            if request.FILES.get('image'):
                 task.image=request.FILES.get('image')
-           print(task.image.url)
            task.save()
            return redirect('/')
     return render(request, 'Todo/create.html', {'form':form})
@@ -56,7 +55,6 @@ def updateTask(request,pk):
             task.text= form.cleaned_data.get('text')
             task.description= form.cleaned_data.get('description')  
             task.author=request.user
-            print(request.FILES)
             if request.FILES.get('image'):
                 task.image=request.FILES.get('image')
             task.save()
