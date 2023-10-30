@@ -28,11 +28,12 @@ body{
     background-color: white;
     display: flex;
     flex-direction: row;
+    box-shadow: -10px 70px 20px -37px rgba(0, 0, 0, 0.25);
 }
 .sidemain{
     flex-grow: 0.5;
     height: 100%;
-    width:1px ;
+    width:3px ;
     background: #F4F4F4;
     display: flex;
     justify-content: center;
@@ -63,6 +64,7 @@ body{
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    justify-content: center;
 }
 a{
     text-decoration: none;
@@ -86,6 +88,7 @@ a{
     background-size: cover;
     background-clip: content-box;
     background-repeat: no-repeat;
+    background-size: auto 100%;
     width: 120px;
     height: 101px;
     flex-grow: 0;
@@ -100,6 +103,7 @@ a{
     line-height: normal;
     flex-grow: 4;
     margin-left: 20px;
+    margin-top: 10px;
     align-self: center;
 }
 .card .arrow{

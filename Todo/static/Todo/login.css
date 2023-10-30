@@ -10,10 +10,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
     padding: 0%;
-    /* background-image: url('images/background.png');
-    background-repeat: no-repeat;
-    background-size: 50% auto; */
-    /* background-size: cover; */
 }
 .containpic{
     height: 100%;
@@ -32,6 +28,7 @@ body{
     background-color: white;
     display: flex;
     flex-direction: row;
+    box-shadow: -10px 70px 20px -37px rgba(0, 0, 0, 0.25);
 }
 #containpic{
     flex-grow: 1;
@@ -106,4 +103,21 @@ button{
     line-height: normal;
     background: #FEA959;
     border: none;
+}
+.error{
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #F14F4F;
+    color: #FFF;
+    font-style: normal;
+    height: 30px;
+    margin-left: 6px;
+    padding: 6px;
+    width: 100%;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    transition-duration:1s;
+    transition-delay: 0.5s;
+    transition-timing-function: linear;
 }

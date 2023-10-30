@@ -9,10 +9,7 @@ body{
     background-color: #FEA959;
     left: 50%;
     transform: translateX(-50%);
-    /* background-image: url('images/background.png');
-    background-repeat: no-repeat;
-    background-size: 50% auto; */
-    /* background-size: cover; */
+    padding: 0%;
 }
 .containpic{
     height: 100%;
@@ -31,23 +28,21 @@ body{
     background-color: white;
     display: flex;
     flex-direction: row;
+    box-shadow: -10px 70px 20px -37px rgba(0, 0, 0, 0.25);
 }
 #containpic{
     flex-grow: 1;
     height: 100%;
     width: 100%;
-    background: url('/media/pics/loginback.png'), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
+    background-position: 50% 80%;
 }
 .formm{
     flex-grow: 1;
     box-sizing: border-box;
-    padding: 90px 71px 0px 71px;
+    padding: 9px 92px 0px 71px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: -42px;
-    background-color: white;
 }
 .head-text{
     color: #111;
@@ -59,21 +54,43 @@ body{
     align-self: center;
     margin-bottom: 30px;
 }
-input{
+input[type="text"]{
     box-sizing: border-box;
     width: 100%;
     margin: 6px;
     height: 40px;
     flex-shrink: 0;
-    border-radius: 10px;
+    border-radius: 6px;
     border: 2px solid #404952;
     background: #EDEDF1;
     padding:7px;
 }
+textarea{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 6px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 2px solid #404952;
+    background: #EDEDF1;
+}
+label{
+    margin: 10px 0px 0px 6px;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+}
+label[for="id_done"]{
+    display: block;
+}
 button{
     position: relative;
-    top: 7px;
-    left: 77%;
+    top: -5px;
+    left: 81%;
     width: 62px;
     height: 30px;
     text-align: center;
@@ -86,4 +103,20 @@ button{
     line-height: normal;
     background: #FEA959;
     border: none;
+}
+input[type="checkbox"]{
+    color: #111;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline;
+    position: relative;
+    top: -5.1%;
+    left: 42px;
+}
+#check{
+    margin-top: 20px;
+    margin-left: 7px;
 }

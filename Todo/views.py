@@ -18,6 +18,7 @@ def home(request):
     return render(request,'Todo/home.html',{'tasks':tasks,'count':num})
 
 def sign_up(request):
+    message = False
     if request.method =='POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -25,10 +26,11 @@ def sign_up(request):
             login(request,user)
             return redirect('/')
         else:
-             print(form.error_messages)
+             message=form.error_messages
+             print(message)
     else:
         form = RegisterForm()
-    return render(request,'registration/sign_up.html', {'form':form})
+    return render(request,'registration/sign_up.html', {'form':form,'message':message})
 
 @login_required(login_url='/login')
 def addTask(request):

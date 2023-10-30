@@ -9,6 +9,11 @@
 <div id="containpic"></div>
 <div class="formm">
     <p class="head-text">Log In</p>
+    {% if form.errors %}
+    <div class="error">
+        {{ form.error_messages }}
+    </div>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         {{ form.username.label_tag }}
